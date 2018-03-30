@@ -1,0 +1,24 @@
+{
+  "name": "r4rimporter",
+  "version": "1.0.0",
+  "description": "Prototype Resources for Researchers Importer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryanpizzillo/r4rimporter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bryanpizzillo/r4rimporter/issues"
+  },
+  "homepage": "https://github.com/bryanpizzillo/r4rimporter#readme",
+  "dependencies": {
+    "config": "^1.30.0",
+    "elasticsearch": "^14.2.2",
+    "gray-matter": "^3.1.1"
+  }
+}

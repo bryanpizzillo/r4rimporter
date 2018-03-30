@@ -1,0 +1,164 @@
+{
+    "mappings": {
+        "resource": {
+            "properties": {
+                "description": {
+                    "type": "keyword",
+                    "fields": {
+                        "_fulltext": {
+                            "type": "text",
+                            "analyzer": "englishfulltext"
+                        }
+                    },
+                    "include_in_all": true
+                },
+                "docs": {
+                    "type": "text",
+                    "fields": {
+                        "_fulltext": {
+                            "type": "text",
+                            "analyzer": "englishfulltext"
+                        }
+                    }
+                },
+                "id": {
+                    "type": "integer",
+                    "include_in_all": true
+                },
+                "pocs": {
+                    "type": "nested",
+                    "include_in_root": true,
+                    "properties": {
+                        "email": {
+                            "type": "keyword"
+                        },
+                        "name": {
+                            "type": "nested",
+                            "include_in_root": true,
+                            "properties": {
+                                "firstName": {
+                                    "type": "keyword",
+                                    "fields": {
+                                        "_fulltext": {
+                                            "type": "text",
+                                            "analyzer": "englishfulltext"
+                                        }
+                                    }
+                                },
+                                "lastName": {
+                                    "type": "keyword",
+                                    "fields": {
+                                        "_fulltext": {
+                                            "type": "text",
+                                            "analyzer": "englishfulltext"
+                                        }
+                                    }
+                                },
+                                "middleName": {
+                                    "type": "keyword",
+                                    "fields": {
+                                        "_fulltext": {
+                                            "type": "text",
+                                            "analyzer": "englishfulltext"
+                                        }
+                                    }
+                                },
+                                "prefix": {
+                                    "type": "keyword"
+                                },
+                                "suffix": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "phone": {
+                            "type": "keyword"
+                        },
+                        "title": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "researchAreas": {
+                    "type": "nested",
+                    "include_in_root": true,
+                    "properties": {
+                        "key": {
+                            "type": "text",
+                            "analyzer": "keyword_ci",
+                            "fielddata": true
+                        },
+                        "label": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "researchTypes": {
+                    "type": "nested",
+                    "include_in_root": true,
+                    "properties": {
+                        "key": {
+                            "type": "text",
+                            "analyzer": "keyword_ci",
+                            "fielddata": true
+                        },
+                        "label": {
+                            "type": "keyword"
+                        }
+                    }
+                },
+                "resourceAccess": {
+                    "type": "text"
+                },
+                "title": {
+                    "type": "keyword",
+                    "fields": {
+                        "_fulltext": {
+                            "type": "text",
+                            "analyzer": "englishfulltext"
+                        }
+                    },
+                    "include_in_all": true
+                },
+                "toolTypes": {
+                    "type": "nested",
+                    "include_in_root": true,
+                    "properties": {
+                        "subtype": {
+                            "type": "nested",
+                            "include_in_root": true,
+                            "properties": {
+                                "key": {
+                                    "type": "text",
+                                    "analyzer": "keyword_ci",
+                                    "fielddata": true
+                                },
+                                "label": {
+                                    "type": "keyword"
+                                }
+                            }
+                        },
+                        "type": {
+                            "type": "nested",
+                            "include_in_root": true,
+                            "properties": {
+                                "key": {
+                                    "type": "text",
+                                    "analyzer": "keyword_ci",
+                                    "fielddata": true
+                                },
+                                "label": {
+                                    "type": "keyword"
+                                }
+                            }
+                        }
+                    }
+                },
+                "website": {
+                    "type": "keyword",
+                    "include_in_all": true
+                }
+            }
+        }
+    }
+}

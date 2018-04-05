@@ -1,5 +1,5 @@
-
-const winston               = require('winston');
+const https             = require('https');
+const winston           = require('winston');
 
 const GithubResourceSource = require('./lib/acquisition/github-resource-source');
 
@@ -25,10 +25,13 @@ const logger = winston.createLogger({
 
 async function main() {
 
-
-
-    const source = await GithubResourceSource.GetInstance(logger, {
-        repo: 'https://github.com/bryanpizzillo/r4rcontent'
+    const agent = new https.Agent({
+        keepAlive: true,
+        maxSockets: 100
+    })
+    
+    const source = await GithubResourceSource.GetInstance(logger, agent, {
+        repoUrl: 'https://github.com/bryanpizzillo/r4rcontent'
     });
  
     await source.getResources();

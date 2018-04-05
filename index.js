@@ -1,40 +1,41 @@
 const https             = require('https');
 const winston           = require('winston');
+const config            = require('config');
 
-const GithubResourceSource = require('./lib/acquisition/github-resource-source');
-
-
-// This should be based on a config really...
-const logger = winston.createLogger({
-    level: 'debug',
-    format: winston.format.simple(),
-    transports: [
-        new winston.transports.Console()
-    ]
-})
-
-// We will probably need to authenticate to get around the rate limits
-// they are based on IP address, which for us *could* be a major limiter.
-
-
-//https://octokit.github.io/rest.js/#api-Repos-getContent
-
-// Map Content
-
-// Store Content
+const ResourcesProcessor = require('./lib/core/resources-processor');
 
 async function main() {
 
-    const agent = new https.Agent({
-        keepAlive: true,
-        maxSockets: 100
+    // This should be based on a config really...
+    const logger = winston.createLogger({
+        level: config.has("logging.level") ? config.get("logging.level") : 'info',
+        format: winston.format.simple(),
+        transports: [
+            new winston.transports.Console()
+        ]
     })
+
+    let processor;
+
+    try {
+        processor = new ResourcesProcessor(logger, config.get("pipeline"));
+    } catch(err) {        
+        logger.error("Terminal Errors occurred.")
+        console.error(err);
+        logger.error("Exiting...")
+        process.exit(1);
+    }
     
-    const source = await GithubResourceSource.GetInstance(logger, agent, {
-        repoUrl: 'https://github.com/bryanpizzillo/r4rcontent'
-    });
- 
-    await source.getResources();
+    try {    
+        await processor.run();
+        logger.info("Successfully completed processing.")
+        process.exit(0);
+    } catch(err) {
+        logger.error("Terminal Errors occurred.")
+        console.error(err);
+        logger.error("Exiting...")
+        process.exit(2);        
+    }
 }
 
 main();

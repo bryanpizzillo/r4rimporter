@@ -4,7 +4,8 @@
   "description": "Prototype Resources for Researchers Importer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest lib",
+    "coverage": "jest --collectCoverageFrom=lib/**.js --coverage lib"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
     "elasticsearch": "^14.2.2",
     "gray-matter": "^3.1.1",
     "winston": "^3.0.0-rc3"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3"
   }
 }

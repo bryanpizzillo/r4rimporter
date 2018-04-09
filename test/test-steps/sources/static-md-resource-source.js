@@ -1,9 +1,10 @@
 const AbstractResourceSource = require('../../../lib/core/abstract-resource-source');
 
 /**
- * This class implements a Test resource source
+ * This class implements a Test resource source for serving up a collection of
+ * static markdown files
  */
-class TestResourceSource extends AbstractResourceSource {
+class StaticMdResourceSource extends AbstractResourceSource {
 
     constructor(logger) {
         super(logger);
@@ -11,11 +12,10 @@ class TestResourceSource extends AbstractResourceSource {
 
     /**
      * Get a collection of resources from this source
-     * @returns an array containing a single empty object
      */
     async getResources() {
-        this.logger.debug("TestResourceSource:getResources")
-        return [{}];
+        this.logger.debug("StaticMdResourceSource:getResources")
+        return [];
     }    
 
     /**
@@ -32,8 +32,8 @@ class TestResourceSource extends AbstractResourceSource {
      * @param {Object} config configuration parameters to use for this instance.
      */
     static async GetInstance(logger, config) {
-        
-        return new TestResourceSource(logger);
+        //config should be an array of md files...
+        return new StaticMdResourceSource(logger);
     }  
 }
 

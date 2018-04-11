@@ -31,7 +31,7 @@
   "docs": [
     { "label": "Office of Examples and Tests (OET)", "key": "oet" }
   ],
-  "poc": [
+  "pocs": [
     {
       "email": "john.doe@example.org",
       "name": {

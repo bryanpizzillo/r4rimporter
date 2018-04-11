@@ -1,3 +1,26 @@
 {
-  
+  "id": 9999,
+  "title": "Full Item Title",
+  "website": "https://www.example.org/item",
+  "description": "Etiam cuncti quaque praefixaque plura dorso hac.",
+  "resourceAccess": {
+      "notes": "This resource is free like it says",
+      "type": "open"
+  },
+  "poc": [
+    {
+      "email": "john.doe@example.org",
+      "name": {
+        "firstname": "John",
+        "lastname": "Doe",
+        "middlename": "Alexander",
+        "prefix": "Dr.",
+        "suffix": "Ph.D."
+      },
+      "phone": "240-555-1212",
+      "title": "Program Manager NCI CBIIT"
+    }
+  ],
+  "researchAreas": [
+  ]
 }

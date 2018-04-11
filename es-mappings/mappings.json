@@ -2,6 +2,16 @@
     "mappings": {
         "resource": {
             "properties": {
+                "body": {
+                    "type": "keyword",
+                    "fields": {
+                        "_fulltext": {
+                            "type": "text",
+                            "analyzer": "englishfulltext"
+                        }
+                    },
+                    "include_in_all": true
+                },
                 "description": {
                     "type": "keyword",
                     "fields": {

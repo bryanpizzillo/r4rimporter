@@ -8,6 +8,7 @@ website: https://www.example.org/item
 toolTypes:
   - toolType: datasets_databases/clinical_data
   - toolType: datasets_databases/epidemiologic_data
+  - toolType: analysis_tools
 researchAreas:
   - researchArea: cancer_biology
   - researchArea: cancer_omics

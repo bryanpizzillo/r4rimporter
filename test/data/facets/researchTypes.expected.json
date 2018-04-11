@@ -1,0 +1,7 @@
+{
+    "basic": { "label": "Basic", "key": "basic" },
+    "translational": { "label": "Translational", "key": "translational" },    
+    "clinical_trials": { "label": "Clinical Trials", "key": "clinical_trials" },
+    "epidemiologic": { "label": "Epidemiologic", "key": "epidemiologic" },
+    "clinical": { "label": "Clinical", "key": "clinical" }
+}

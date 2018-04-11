@@ -1,0 +1,5 @@
+{
+    "oet": { "label": "Office of Examples and Tests (OET)", "key": "oet" },
+    "dse": { "label": "Division of Samples and Examples (DSE)", "key": "dse" },
+    "ceg": { "label": "Center for Exempli Gratio (CEG)", "key": "ceg" }
+}

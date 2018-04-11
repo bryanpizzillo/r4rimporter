@@ -1,12 +1,36 @@
 {
   "id": 9999,
   "title": "Full Item Title",
+  "description": "<p>Etiam cuncti quaque praefixaque plura dorso hac.",
   "website": "https://www.example.org/item",
-  "description": "Etiam cuncti quaque praefixaque plura dorso hac.",
+  "toolTypes": [
+    {
+      "type": { "key": "datasets_databases", "label": "Datasets & Databases" },
+      "subtype": { "key": "clinical_data", "label": "Clinical Data" }
+    },
+    {
+      "type": { "key": "datasets_databases", "label": "Datasets & Databases" },
+      "subtype": { "key": "epidemiologic_data", "label": "Epidemiologic Data" }
+    },
+    {
+      "type": { "label": "Analysis Tools", "key": "analysis_tools" }
+    }
+  ],
+  "researchAreas": [
+    { "label": "Cancer Biology", "key": "cancer_biology" },
+    { "label": "Cancer Omics", "key": "cancer_omics" }
+  ],
+  "researchTypes": [
+    { "label": "Basic", "key": "basic" },
+    { "label": "Clinical", "key": "clinical" }
+  ],
   "resourceAccess": {
       "notes": "This resource is free like it says",
       "type": "open"
   },
+  "docs": [
+    { "label": "Office of Examples and Tests (OET)", "key": "oet" }
+  ],
   "poc": [
     {
       "email": "john.doe@example.org",
@@ -21,6 +45,5 @@
       "title": "Program Manager NCI CBIIT"
     }
   ],
-  "researchAreas": [
-  ]
+  "body": "<h2>Promissa ignavos putate</h2><p>Lorem markdownum submovet dabant; tum suaque neci <a href=http://mihi-pectora.net/>gerens at Lycabas</a> videat <em>mihi</em>? Columbas femina: adulter prohibent aeternas dicitur traxere silvas suscipitur favilla, suo nobis, erigor inopes, luctusque rursus. Ab tollere partes tu hiatus <a href=http://www.iussit.org/in-erat.php>Troiana sic</a> aegros <em>magno et orbe</em> coniuge patriam velamina.<ul><li>Maius inops ominibus in tamen continet tibi<li>Orbis nox deorum supplex sententia domitamque Troiae<li>In veluti sanguine melior<li>Intellegit pervenit actum ipse antrum ingenium et<li>Timendos comitem que et Cyclopis in intravit<li>Lintea esse sollicita caecaque procul</ul>"
 }

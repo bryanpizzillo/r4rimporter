@@ -23,10 +23,15 @@
     "config": "^1.30.0",
     "elasticsearch": "^14.2.2",
     "gray-matter": "^3.1.1",
+    "rehype-preset-minify": "^2.0.0",
     "winston": "^3.0.0-rc3"
   },
   "devDependencies": {
     "jest": "^22.4.3",
-    "nock": "^9.2.4"
+    "nock": "^9.2.4",
+    "rehype-stringify": "^3.0.0",
+    "remark-parse": "^5.0.0",
+    "remark-rehype": "^3.0.0",
+    "unified": "^6.1.6"
   }
 }

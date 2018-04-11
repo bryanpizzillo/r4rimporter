@@ -1,0 +1,13 @@
+{
+    "cancer_treatment": { "label": "Cancer Treatment", "key": "cancer_treatment" },
+    "cancer_biology": { "label": "Cancer Biology", "key": "cancer_biology" },
+    "cancer_omics": { "label": "Cancer Omics", "key": "cancer_omics" },
+    "screening_detection": { "label": "Screening & Detection", "key": "screening_detection" },
+    "cancer_health_disparities": { "label": "Cancer Health Disparities", "key": "cancer_health_disparities" },
+    "cancer_public_health": { "label": "Cancer & Public Health", "key": "cancer_public_health" },
+    "cancer_statistics": { "label": "Cancer Statistics", "key": "cancer_statistics" },
+    "cancer_diagnosis": { "label": "Cancer Diagnosis", "key": "cancer_diagnosis" },
+    "causes_of_cancer": { "label": "Causes of Cancer", "key": "causes_of_cancer" },
+    "cancer_survivorship": { "label": "Cancer Survivorship", "key": "cancer_survivorship" },
+    "cancer_prevention": { "label": "Cancer Prevention", "key": "cancer_prevention" }
+}

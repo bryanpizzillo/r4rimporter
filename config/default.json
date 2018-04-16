@@ -4,42 +4,34 @@
     },
     "pipeline": { 
         "source": {
-            "type": "test/test-steps/sources/test-resource-source",
-            "config": {}
-            // For the github source:
-            // ----------------------
-            //"type": "lib/sources/github-resource-source",
-            //"config": {
-            //  "repo": "https://github.com/bryanpizzillo/r4rcontent"
-            //}
+            "type": "lib/sources/github-resource-source",
+            "config": {
+                "repoUrl": "https://github.com/bryanpizzillo/r4rcontent",
+                "resourcesPath": "/resources"
+            }
         },
         "transformers": [
             {
-                "type": "test/test-steps/transformers/test-resource-transformer",
-                "config": {}
-                // For the markdown with front-matter transformer:
-                // ----------------------
-                //"type": "lib/transformers/netlifymd-resource-transformer",
-                //"config": {
-                //  "mappingSources": {
-                //    "toolTypes": "",
-                //    "researchAreas": "",
-                //    "researchTypes": "",
-                //    "docs": ""  
-                //  }
-                //}
+                "type": "lib/transformers/netlifymd-resource-transformer",
+                "config": {
+                 "mappingUrls": {
+                    "docs": "https://raw.githubusercontent.com/bryanpizzillo/r4rcontent/master/data/docs.json",
+                    "researchAreas": "https://raw.githubusercontent.com/bryanpizzillo/r4rcontent/master/data/researchAreas.json",
+                    "researchTypes": "https://raw.githubusercontent.com/bryanpizzillo/r4rcontent/master/data/researchTypes.json",
+                    "toolTypes": "https://raw.githubusercontent.com/bryanpizzillo/r4rcontent/master/data/toolTypes.json"
+                 }
+                }
             }
         ],
         "loader": {
-            "type": "test/test-steps/loaders/test-resource-loader",
-            "config": {}
-            // For the markdown with front-matter transformer:
-            // ----------------------
-            //"type": "lib/loaders/elastic-resource-loader",
-            //"config": {
-            //    "servers": [ "https://127.0.0.1:9200" ],
-            //    "index": "r4r"
-            //}
+            "type": "lib/loaders/elastic-resource-loader",
+            "config": {
+               "eshosts": [ "http://127.0.0.1:9200" ],
+               "daysToKeep": 10,
+               "aliasName": "r4r",
+               "mappingPath": "es-mappings/mappings.json",
+               "settingsPath": "es-mappings/settings.json"
+            }
         }
     }
 }

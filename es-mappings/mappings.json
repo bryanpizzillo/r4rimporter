@@ -23,11 +23,16 @@
                     "include_in_all": true
                 },
                 "docs": {
-                    "type": "text",
-                    "fields": {
-                        "_fulltext": {
+                    "type": "nested",
+                    "include_in_root": true,
+                    "properties": {
+                        "key": {
                             "type": "text",
-                            "analyzer": "englishfulltext"
+                            "analyzer": "keyword_ci",
+                            "fielddata": true
+                        },
+                        "label": {
+                            "type": "keyword"
                         }
                     }
                 },
@@ -118,7 +123,16 @@
                     }
                 },
                 "resourceAccess": {
-                    "type": "text"
+                    "type": "nested",
+                    "include_in_root": true,
+                    "properties": {
+                        "type": {
+                            "type": "keyword"
+                        },
+                        "notes": {
+                            "type": "keyword"
+                        }
+                    }
                 },
                 "title": {
                     "type": "keyword",

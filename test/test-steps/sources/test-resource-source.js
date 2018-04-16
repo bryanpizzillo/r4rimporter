@@ -10,13 +10,34 @@ class TestResourceSource extends AbstractResourceSource {
     }
 
     /**
+     * Called before any resources are loaded.
+     */
+    async begin() {
+        return;
+    }    
+
+    /**
      * Get a collection of resources from this source
      * @returns an array containing a single empty object
      */
     async getResources() {
         this.logger.debug("TestResourceSource:getResources")
         return [{}];
-    }    
+    }
+
+    /**
+     * Method called after all resources have been loaded
+     */
+    async end() {
+        return;
+    }
+    
+    /**
+     * Called upon a fatal loading error. Use this to clean up any items created on startup
+     */
+    async abort() {
+        return;
+    }       
 
     /**
      * A static method to validate a configuration object against this module type's schema

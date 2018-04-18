@@ -150,7 +150,7 @@
                     "properties": {
                         "subtype": {
                             "type": "nested",
-                            "include_in_root": true,
+                            "include_in_parent": true,
                             "properties": {
                                 "key": {
                                     "type": "text",
@@ -164,7 +164,7 @@
                         },
                         "type": {
                             "type": "nested",
-                            "include_in_root": true,
+                            "include_in_parent": true,
                             "properties": {
                                 "key": {
                                     "type": "text",

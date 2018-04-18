@@ -51,7 +51,7 @@
                             "type": "nested",
                             "include_in_root": true,
                             "properties": {
-                                "firstName": {
+                                "firstname": {
                                     "type": "keyword",
                                     "fields": {
                                         "_fulltext": {
@@ -60,7 +60,7 @@
                                         }
                                     }
                                 },
-                                "lastName": {
+                                "lastname": {
                                     "type": "keyword",
                                     "fields": {
                                         "_fulltext": {
@@ -69,7 +69,7 @@
                                         }
                                     }
                                 },
-                                "middleName": {
+                                "middlename": {
                                     "type": "keyword",
                                     "fields": {
                                         "_fulltext": {

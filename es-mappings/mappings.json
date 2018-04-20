@@ -148,34 +148,33 @@
                     "type": "nested",
                     "include_in_root": true,
                     "properties": {
-                        "subtype": {
-                            "type": "nested",
-                            "include_in_parent": true,
-                            "properties": {
-                                "key": {
-                                    "type": "text",
-                                    "analyzer": "keyword_ci",
-                                    "fielddata": true
-                                },
-                                "label": {
-                                    "type": "keyword"
-                                }
-                            }
+                        "key": {
+                            "type": "text",
+                            "analyzer": "keyword_ci",
+                            "fielddata": true
                         },
-                        "type": {
-                            "type": "nested",
-                            "include_in_parent": true,
-                            "properties": {
-                                "key": {
-                                    "type": "text",
-                                    "analyzer": "keyword_ci",
-                                    "fielddata": true
-                                },
-                                "label": {
-                                    "type": "keyword"
-                                }
-                            }
+                        "label": {
+                            "type": "keyword"
                         }
+                    }
+                },
+                "toolSubtypes": {
+                    "type": "nested",
+                    "include_in_root": true,
+                    "properties": {
+                        "key": {
+                            "type": "text",
+                            "analyzer": "keyword_ci",
+                            "fielddata": true
+                        },
+                        "label": {
+                            "type": "keyword"
+                        },
+                        "parentKey": {
+                            "type": "text",
+                            "analyzer": "keyword_ci",
+                            "fielddata": true
+                        }                        
                     }
                 },
                 "website": {

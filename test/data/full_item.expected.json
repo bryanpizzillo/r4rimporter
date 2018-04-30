@@ -4,17 +4,12 @@
   "description": "<p>Etiam cuncti quaque praefixaque plura dorso hac.",
   "website": "https://www.example.org/item",
   "toolTypes": [
-    {
-      "type": { "key": "datasets_databases", "label": "Datasets & Databases" },
-      "subtype": { "key": "clinical_data", "label": "Clinical Data" }
-    },
-    {
-      "type": { "key": "datasets_databases", "label": "Datasets & Databases" },
-      "subtype": { "key": "epidemiologic_data", "label": "Epidemiologic Data" }
-    },
-    {
-      "type": { "label": "Analysis Tools", "key": "analysis_tools" }
-    }
+    { "key": "datasets_databases", "label": "Datasets & Databases" },
+    { "label": "Analysis Tools", "key": "analysis_tools" }
+  ],
+  "toolSubtypes": [
+    { "key": "clinical_data", "label": "Clinical Data", "parentKey": "datasets_databases" },
+    { "key": "epidemiologic_data", "label": "Epidemiologic Data", "parentKey": "datasets_databases" }
   ],
   "researchAreas": [
     { "label": "Cancer Biology", "key": "cancer_biology" },

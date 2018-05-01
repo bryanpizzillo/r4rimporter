@@ -28,6 +28,7 @@
     "winston": "^3.0.0-rc3"
   },
   "devDependencies": {
+    "@types/node": "^10.0.2",
     "jest": "^22.4.3",
     "nock": "^9.2.4",
     "rehype-stringify": "^3.0.0",

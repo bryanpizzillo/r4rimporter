@@ -4,8 +4,13 @@
   "description": "Prototype Resources for Researchers Importer",
   "main": "index.js",
   "scripts": {
-    "test": "jest lib",
+    "test": "jest",
     "coverage": "jest --collectCoverageFrom=lib/**.js --coverage lib"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": ["lib/**.js"]
   },
   "repository": {
     "type": "git",

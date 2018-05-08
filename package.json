@@ -10,7 +10,9 @@
   "jest": {
     "collectCoverage": true,
     "coverageDirectory": "coverage",
-    "collectCoverageFrom": ["lib/**.js"]
+    "collectCoverageFrom": [
+      "lib/**.js"
+    ]
   },
   "repository": {
     "type": "git",

@@ -9,6 +9,40 @@ Resources for Researchers Prototype Importer
 3. For VSCode development
    1. Install Coverage Gutters extension
    2. Install Jest extension
+4. Setup a local configuration
+   1. create a local.json file in the <importer_root>/config directory
+   2. This file is used to override the default.json options and should look something like:
+```
+{
+    "logging": {
+        "level": "debug"
+    },
+    "pipeline": {
+        "source": {
+            "type": "lib/sources/github-resource-source",
+            "config": {
+                "repoUrl": "https://github.com/bryanpizzillo/r4rcontent",
+                "resourcesPath": "/resources",
+                "authentication": {
+                    "type": "token",
+                    "token": "<YOUR_AUTH_TOKEN>"
+                }
+            }
+        },
+        "loader": {
+            "type": "lib/loaders/elastic-resource-loader",
+            "config": {
+               "eshosts": [ "<THE REAL DEV SERVER>" ],
+               //"eshosts": [ "http://localhost:9200" ],
+               "daysToKeep": 10,
+               "aliasName": "r4r_v1",
+               "mappingPath": "es-mappings/mappings.json",
+               "settingsPath": "es-mappings/settings.json"
+            }
+        }
+    }
+}
+```
 
 # To run tests
 `npm test`

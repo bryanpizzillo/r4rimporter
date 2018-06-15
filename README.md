@@ -1,6 +1,8 @@
 # r4rimporter
 Resources for Researchers Prototype Importer
 
+Prerequisites: node 8
+
 # Setup for Development
 1. Install Jest globally
 `npm install -g jest`
@@ -21,7 +23,7 @@ Resources for Researchers Prototype Importer
         "source": {
             "type": "lib/sources/github-resource-source",
             "config": {
-                "repoUrl": "https://github.com/bryanpizzillo/r4rcontent",
+                "repoUrl": "https://github.com/nciocpl/r4rcontent",
                 "resourcesPath": "/resources",
                 "authentication": {
                     "type": "token",

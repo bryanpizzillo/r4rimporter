@@ -31,10 +31,12 @@
     "elasticsearch": "^14.2.2",
     "gray-matter": "^3.1.1",
     "moment": "^2.22.0",
+    "parse-github-repo-url": "^1.4.1",
     "rehype-preset-minify": "^2.0.0",
     "winston": "^3.0.0-rc3"
   },
   "devDependencies": {
+    "@types/jest": "^23.1.0",
     "@types/node": "^10.0.2",
     "jest": "^22.4.3",
     "nock": "^9.2.4",

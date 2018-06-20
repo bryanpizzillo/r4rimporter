@@ -28,6 +28,7 @@
     "@octokit/rest": "^15.2.6",
     "axios": "^0.18.0",
     "config": "^1.30.0",
+    "elastic-tools": "git+https://github.com/nciocpl/elastic-tools.git#1.0.0",
     "elasticsearch": "^14.2.2",
     "gray-matter": "^3.1.1",
     "moment": "^2.22.0",

@@ -2,7 +2,7 @@ const https             = require('https');
 const winston           = require('winston');
 const config            = require('config');
 
-const ResourcesProcessor = require('./lib/core/resources-processor');
+const PipelineProcessor = require('./lib/core/pipeline-processor');
 
 async function main() {
 
@@ -18,7 +18,7 @@ async function main() {
     let processor;
 
     try {
-        processor = new ResourcesProcessor(logger, config.get("pipeline"));
+        processor = new PipelineProcessor(logger, config.get("pipeline"));
     } catch(err) {        
         logger.error("Terminal Errors occurred.")
         console.error(err);

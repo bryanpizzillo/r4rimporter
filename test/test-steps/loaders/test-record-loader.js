@@ -1,41 +1,41 @@
-const AbstractResourceLoader = require('../../../lib/core/abstract-resource-loader');
+const AbstractRecordLoader = require('../../../lib/core/abstract-record-loader');
 
 /**
- * This class implements a test Resource loader
+ * This class implements a test Record loader
  */
-class TestResourceLoader extends AbstractResourceLoader {
+class TestRecordLoader extends AbstractRecordLoader {
 
     constructor(logger) {
         super(logger);
     }
 
     /**
-     * Called before any resources are loaded.
+     * Called before any records are fetched
      */
     async begin() {
-        this.logger.debug("TestResourceLoader:begin")
+        this.logger.debug("TestRecordLoader:begin")
     }
 
     /**
-     * Loads a resource into the data store
+     * Loads a record into the data store
      */
-    async loadResource(resource) {
-        this.logger.debug("TestResourceLoader:loadResource")
-        console.log(resource)
+    async loadRecord(record) {
+        this.logger.debug("TestRecordLoader:loadRecord")
+        console.log(record)
     }
 
     /**
      * Called upon a fatal loading error. Use this to clean up any items created on startup
      */
     async abort() {
-        this.logger("TestResourceLoader:abort")
+        this.logger("TestRecordLoader:abort")
     }
 
     /**
-     * Method called after all resources have been loaded
+     * Method called after all records have been loaded
      */
     async end() {
-        throw new Error("Cannot call abstract method.  Implement end in derrived class.");
+        throw new Error("Cannot call abstract method.  Implement end in derived class.");
     }    
 
     /**
@@ -52,8 +52,8 @@ class TestResourceLoader extends AbstractResourceLoader {
      * @param {Object} config configuration parameters to use for this instance.
      */
     static async GetInstance(logger, config) {
-        return new TestResourceLoader(logger);
+        return new TestRecordLoader(logger);
     }  
 }
 
-module.exports = TestResourceLoader;
+module.exports = TestRecordLoader;

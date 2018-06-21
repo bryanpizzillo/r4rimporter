@@ -1,32 +1,32 @@
-const AbstractResourceSource = require('../../../lib/core/abstract-resource-source');
+const AbstractRecordSource = require('../../../lib/core/abstract-record-source');
 
 /**
- * This class implements a Test resource source
+ * This class implements a Test record source
  */
-class TestResourceSource extends AbstractResourceSource {
+class TestRecordSource extends AbstractRecordSource {
 
     constructor(logger) {
         super(logger);
     }
 
     /**
-     * Called before any resources are loaded.
+     * Called before any records are loaded.
      */
     async begin() {
         return;
     }    
 
     /**
-     * Get a collection of resources from this source
+     * Get a collection of records from this source
      * @returns an array containing a single empty object
      */
-    async getResources() {
-        this.logger.debug("TestResourceSource:getResources")
+    async getRecords() {
+        this.logger.debug("TestRecordSource:getRecords")
         return [{}];
     }
 
     /**
-     * Method called after all resources have been loaded
+     * Method called after all records have been loaded
      */
     async end() {
         return;
@@ -54,8 +54,8 @@ class TestResourceSource extends AbstractResourceSource {
      */
     static async GetInstance(logger, config) {
         
-        return new TestResourceSource(logger);
+        return new TestRecordSource(logger);
     }  
 }
 
-module.exports = TestResourceSource;
+module.exports = TestRecordSource;

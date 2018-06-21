@@ -1,34 +1,34 @@
-const AbstractResourceTransformer = require('../../../lib/core/abstract-resource-transformer');
+const AbstractRecordTransformer = require('../../../lib/core/abstract-record-transformer');
 
 /**
- * This class implements a Test Resource transformer
+ * This class implements a Test Record transformer
  */
-class TestResourceTransformer extends AbstractResourceTransformer {
+class TestRecordTransformer extends AbstractRecordTransformer {
 
     constructor(logger) {
         super(logger);
     }
 
     /**
-     * Called before any resources are transformed -- load mappers and anything else here.
+     * Called before any records are transformed -- load mappers and anything else here.
      */
     async begin() {
-        this.logger.debug("TestResourceTransformer:begin");
+        this.logger.debug("TestRecordTransformer:begin");
     }
 
     /**
-     * Transforms the resource 
+     * Transforms the record 
      */
     async transform(data) {
-        this.logger.debug("TestResourceTransformer:transform");
+        this.logger.debug("TestRecordTransformer:transform");
         return {};
     }
 
     /**
-     * Method called after all resources have been transformed
+     * Method called after all records have been transformed
      */
     async end() {
-        this.logger.debug("TestResourceTransformer:end");
+        this.logger.debug("TestRecordTransformer:end");
     }
 
     /**
@@ -45,8 +45,8 @@ class TestResourceTransformer extends AbstractResourceTransformer {
      * @param {Object} config configuration parameters to use for this instance.
      */
     static async GetInstance(logger, config) {
-        return new TestResourceTransformer(logger);
+        return new TestRecordTransformer(logger);
     } 
 }
 
-module.exports = TestResourceTransformer;
+module.exports = TestRecordTransformer;

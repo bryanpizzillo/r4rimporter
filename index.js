@@ -1,8 +1,7 @@
-const https             = require('https');
-const winston           = require('winston');
-const config            = require('config');
-
-const PipelineProcessor = require('./lib/core/pipeline-processor');
+const { PipelineProcessor } = require('loader-pipeline');
+const path                  = require('path');
+const winston               = require('winston');
+const config                = require('config');
 
 async function main() {
 
@@ -18,7 +17,12 @@ async function main() {
     let processor;
 
     try {
-        processor = new PipelineProcessor(logger, config.get("pipeline"));
+        const rawConfig = config.get("pipeline");
+        const cleanConfig = {
+            ...rawConfig,
+            searchPaths: [ __dirname ]
+        }
+        processor = new PipelineProcessor(logger, cleanConfig);
     } catch(err) {        
         logger.error("Terminal Errors occurred.")
         console.error(err);

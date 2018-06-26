@@ -31,6 +31,7 @@
     "elastic-tools": "git+https://github.com/nciocpl/elastic-tools.git#1.0.0",
     "elasticsearch": "^14.2.2",
     "gray-matter": "^3.1.1",
+    "loader-pipeline": "git+https://github.com/nciocpl/loader-pipeline.git#v1.1.0",
     "moment": "^2.22.0",
     "parse-github-repo-url": "^1.4.1",
     "rehype-preset-minify": "^2.0.0",

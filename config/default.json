@@ -4,7 +4,7 @@
     },
     "pipeline": { 
         "source": {
-            "type": "lib/sources/github-resource-source",
+            "module": "./lib/sources/github-resource-source",
             "config": {
                 "repoUrl": "https://github.com/nciocpl/r4r-content",
                 "resourcesPath": "/resources",
@@ -16,7 +16,7 @@
         },
         "transformers": [
             {
-                "type": "lib/transformers/netlifymd-resource-transformer",
+                "module": "./lib/transformers/netlifymd-resource-transformer",
                 "config": {
                  "mappingUrls": {
                     "docs": "https://raw.githubusercontent.com/nciocpl/r4r-content/master/data/docs.json",
@@ -28,7 +28,7 @@
             }
         ],
         "loader": {
-            "type": "lib/loaders/elastic-resource-loader",
+            "module": "./lib/loaders/elastic-resource-loader",
             "config": {
                "eshosts": [ "http://localhost:9200" ],
                "daysToKeep": 10,               

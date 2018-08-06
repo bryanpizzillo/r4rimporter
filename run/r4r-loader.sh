@@ -60,8 +60,7 @@ function email_notification
 
 
 nvm use 8
-cd /home/nutch/r4r-loader
-node /home/nutch/r4r-loader/index.js
+node index.js
 
 
 exit_code=$?

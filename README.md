@@ -21,10 +21,11 @@ Prerequisites: node 8
     },
     "pipeline": {
         "source": {
-            "type": "lib/sources/github-resource-source",
+            "module": "./lib/sources/github-resource-source",
             "config": {
                 "repoUrl": "https://github.com/nciocpl/r4rcontent",
                 "resourcesPath": "/resources",
+                "branchName": "<YOUR_BRANCH>",
                 "authentication": {
                     "type": "token",
                     "token": "<YOUR_AUTH_TOKEN>"
@@ -32,7 +33,7 @@ Prerequisites: node 8
             }
         },
         "loader": {
-            "type": "lib/loaders/elastic-resource-loader",
+            "module": "lib/loaders/elastic-resource-loader",
             "config": {
                "eshosts": [ "<THE REAL DEV SERVER>" ],
                //"eshosts": [ "http://localhost:9200" ],

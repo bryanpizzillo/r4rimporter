@@ -1,6 +1,19 @@
 # r4rimporter
 Resources for Researchers Prototype Importer
 
+# Configuration Information
+The configuration file is based on the https://github.com/NCIOCPL/loader-pipeline library.  For the R4R Loader we have implemented the following pipeline steps:
+* Source: GithubResourceSource - This class pulls the content from a Github Repository 
+  * Configuration:
+    * repoUrl : (required) The git repo where the content resides.
+    * resourcesPath: (required) The path within the repo to the resources.
+    * branchName : (default: master) The branch to use.
+    * authentication : (optional) Git authentication configuration. See https://github.com/octokit/rest.js#authentication for options, but token authentication is what has been tested. If no authentication is defined, then the source will use the public API, which has IP source address limits. 
+* Transformers:
+  * NetlifyMDResourceTransformer - 
+    * Configuration:
+      * 
+
 Prerequisites: node 8
 
 # Setup for Development

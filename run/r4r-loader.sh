@@ -1,3 +1,4 @@
+export THIS_HOST_NAME=`uname -n` 
 export LOG_FILE=run/r4r-loader.log
 
 if [[ $THIS_HOST_NAME == ncias-p* ]]
@@ -73,5 +74,5 @@ fi
 
 
 logger "INFO: r4r-loader : End"
-
+email_notification 'r4r loader succeed' ''
 exit 0

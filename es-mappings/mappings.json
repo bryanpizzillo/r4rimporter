@@ -140,6 +140,11 @@
                         "_fulltext": {
                             "type": "text",
                             "analyzer": "englishfulltext"
+                        },
+                        "_sort": {
+                            "type": "text",
+                            "analyzer": "keyword_ci",
+                            "fielddata" : true
                         }
                     },
                     "include_in_all": true

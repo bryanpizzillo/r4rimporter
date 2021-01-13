@@ -1,51 +1,48 @@
 {
   "name": "r4rimporter",
   "version": "1.1.0",
-  "description": "Prototype Resources for Researchers Importer",
+  "description": "Resources for Researchers Importer",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "coverage": "jest --collectCoverageFrom=lib/**.js --coverage lib"
+    "coverage": "jest --coverage lib"
   },
   "jest": {
     "collectCoverage": true,
-    "coverageDirectory": "coverage",
-    "collectCoverageFrom": [
-      "lib/**.js"
-    ]
+    "coverageDirectory": "coverage"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bryanpizzillo/r4rimporter.git"
+    "url": "git+https://github.com/nciocpl/r4r-loader.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bryanpizzillo/r4rimporter/issues"
+    "url": "https://github.com/nciocpl/r4r-loader/issues"
   },
-  "homepage": "https://github.com/bryanpizzillo/r4rimporter#readme",
+  "homepage": "https://github.com/nciocpl/r4r-loader#readme",
   "dependencies": {
-    "@octokit/rest": "^15.2.6",
-    "axios": "^0.18.0",
-    "config": "^1.30.0",
-    "elastic-tools": "git+https://github.com/nciocpl/elastic-tools.git#1.0.0",
-    "elasticsearch": "^14.2.2",
-    "gray-matter": "^3.1.1",
-    "loader-pipeline": "git+https://github.com/nciocpl/loader-pipeline.git#v1.1.0",
-    "moment": "^2.22.0",
+    "@octokit/rest": "^18.0.12",
+    "axios": "^0.21.1",
+    "config": "^3.3.3",
+    "elastic-tools": "git+https://github.com/nciocpl/elastic-tools.git#v1.1.2",
+    "elasticsearch": "^15.5.0",
+    "gray-matter": "^4.0.2",
+    "loader-pipeline": "git+https://github.com/nciocpl/loader-pipeline.git#v1.1.1",
+    "moment": "^2.29.1",
     "parse-github-repo-url": "^1.4.1",
-    "rehype-preset-minify": "^2.0.0",
-    "winston": "^3.0.0"
+    "rehype-preset-minify": "^5.1.0",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@types/jest": "^23.1.0",
-    "@types/node": "^10.0.2",
-    "jest": "^22.4.3",
-    "nock": "^9.2.4",
-    "rehype-stringify": "^3.0.0",
-    "remark-parse": "^5.0.0",
-    "remark-rehype": "^3.0.0",
-    "unified": "^6.1.6",
-    "winston-null-transport": "git+https://github.com/NCIOCPL/winston-null-transport.git#1.0.0"
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.20",
+    "jest": "^26.6.3",
+    "nock": "^13.0.5",
+    "rehype-stringify": "^8.0.0",
+    "remark-parse": "^9.0.0",
+    "remark-rehype": "^8.0.0",
+    "unified": "^9.2.0",
+    "winston-null-transport": "git+https://github.com/NCIOCPL/winston-null-transport.git#v1.0.2"
   }
 }
